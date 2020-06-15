@@ -45,10 +45,22 @@ def test_method(method_name):
         print("fail")
 
 
+def yielder():
+    print("!")
+    for i in range(10):
+        yield i
+
+
 if __name__ == "__main__":
+    """
     print("INSERTION")
     test_method(insertion_sort)
     print("CHOICE")
     test_method(choice_sort)
     print("BUBBLE")
     test_method(choice_sort)
+    """
+    print("YIELD testing...")
+    generator = yielder()
+    for item in generator:
+        print(item)
